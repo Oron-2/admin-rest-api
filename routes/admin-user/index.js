@@ -50,6 +50,7 @@ app.put("/users/login", function (req, res) {
                     // in the browser from accessing the cookie data, which will act as protection from potential
                     // cross-site scripting XSS attacks
                     httpOnly: true,
+                    sameSite: 'None',
                     // marks the cookie to be used with HTTPS only. This should only be applied in production mode, otherwise
                     // testing things in development mode would be impossible (where HTTP is used)
                     secure: process.env.NODE_ENV === "production",
