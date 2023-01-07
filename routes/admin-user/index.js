@@ -52,7 +52,7 @@ app.put("/users/login", function (req, res) {
                     httpOnly: true,
                     // marks the cookie to be used with HTTPS only. This should only be applied in production mode, otherwise
                     // testing things in development mode would be impossible (where HTTP is used)
-                    // secure: process.env.NODE_ENV === "production",
+                    secure: process.env.NODE_ENV === "production",
                     // the method used for cookie value encoding. In this case the cookie is a String data type. 
                     // This would normally default to encodeURLComponent
                     encode: String,
