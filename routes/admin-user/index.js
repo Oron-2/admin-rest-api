@@ -51,6 +51,7 @@ app.put("/users/login", function (req, res) {
                     secure: process.env.NODE_ENV === "production",
                     // the method used for cookie value encoding. In this case the cookie is a String data type. 
                     // This would normally default to encodeURLComponent
+                    sameSite: "none",
                     encode: String,
                     // the domain name assigned to the cookie. This must exactly match the domain of the admin website,
                     // otherwise the cookie won't work. The tldjs NPM package is used to dynamically extract 
